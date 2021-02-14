@@ -5,7 +5,6 @@
 
 original_dir=$(pwd);
 cd "$1";
-echo "$1";
 for dir in "$1"; do
 	if [ -d "$dir" ]; then
 		cd "$dir";

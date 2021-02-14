@@ -1,5 +1,5 @@
 # Does what the name suggests. Takes two arguments and expects the script it
-# applies to all subdirectories of the second argument to take exactly one argument.
+# applies to all subdirectories of the second argument to take at least one argument.
 # First arg: script to be applied. Second arg: directory that has the desired subdirectories.
 
 #clear;
@@ -11,7 +11,7 @@ elif [ ! -d "$2" ]; then
 else
 	for dir in "$2"*; do
 		if [ -d "$dir" ]; then
-			"$original_dir/$1" "$dir"/;
+			"$original_dir/$1" "$dir"/ "${@:3}";
 		fi
 	done
 fi
