@@ -10,7 +10,7 @@ else
         echo "Renaming '$2' to '$3'.";
 		mv "$2" "$3";
 	else
-		echo "Make sure you specified the second and third argument correctly."
+		echo "Make sure you specified the second and third argument correctly.";
 	fi
 	cd "$original_dir";
 fi

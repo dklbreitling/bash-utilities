@@ -5,7 +5,7 @@
 original_dir=$(pwd);
 if [ -z "$1" ]; then
 	echo "No argument passed, applying script to current directory.";
-	set -- "$original_dir/"
+	set -- "$original_dir/";
 fi
 echo "Moving all files with file ending in '$1' into directory '$1Other'.";
 cd "$1";
