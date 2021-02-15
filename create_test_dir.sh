@@ -1,5 +1,5 @@
 # Creates directory 'test/' in current directory with subdirectories '1/', '2/', and '3/',
-# each containing files 'a.a', 'b.b', and 'c.c'.
+# each containing subdirectories 'a/', 'b/', and 'c/' with  files 'a.a', 'b.b', and 'c.c'.
 
 mkdir test;
 cd test;
