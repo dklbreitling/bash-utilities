@@ -4,12 +4,16 @@
 # Example usage: "./apply_script_to_all_subfolders.sh ./print_dir_name.sh path/to/directory/".
 
 original_dir=$(pwd);
+# echo "$1";
 cd "$1";
-for dir in "$1"; do
+# echo $1;
+# pwd; ls;
+for dir in ./*; do
 	if [ -d "$dir" ]; then
+		# echo $dir;
 		cd "$dir";
 		pwd;
-		cd "$1";
+		cd ..;
 	fi
 done
 cd "$original_dir";
