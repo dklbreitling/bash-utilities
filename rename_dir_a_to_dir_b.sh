@@ -6,11 +6,11 @@ if [ -z "$1" ]; then
 	echo "Please pass as the first argument the folder you want to apply the script to (with trailing '/').";
 else
 	cd "$1";
-	if [ -d "$2" ] || [ -z "$3" ]; then
+	if [ -d "$2" ] && [ ! -z "$3" ]; then
         echo "Renaming '$2' to '$3'.";
 		mv "$2" "$3";
 	else
-		echo "Make sure you specified the second and third argument correctly.";
+		echo "Make sure to specify the second and third argument correctly.";
 	fi
 	cd "$original_dir";
 fi
